@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+.slider{
+    width: 100%;
+    height: 500px;
+    background-color: #ccc;
+}
+.slider-track{
+    min-width: 100%;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    height: 100%;
+    animation: scroll-infinite infinite linear 30s;
+}
+.slide{
+    width: 400px;
+    background-color: rgb(126, 150, 156);
+    height: 100%;
+    transition: all linear 1s;
+    transform-origin: right center;
+}
+.slide-central{
+    background-color: red;
+    transform: scaleX(1.5);
+}
+
+@keyframes scroll-infinite{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
